@@ -59,3 +59,6 @@ TagManager:
   - name: Ground
     uniqueID: 1630486427
     locked: 0
+  - name: FrontItem
+    uniqueID: 3963661629
+    locked: 0

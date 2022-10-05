@@ -15,17 +15,14 @@ public class characterMovement : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private BoxCollider2D bc;
-    public Transform GroundCheck;
     public float extraHeightTest;
 
     Vector2 vecGravity;
 
-    private bool isRun = false;
     private bool isJump = false;
 
     private float jumpTimeCounter;
     public float jumpTime;
-    public float fallMultiplier;
 
     void Start()
     {
@@ -38,6 +35,12 @@ public class characterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // if(Input.GetKeyDown(KeyCode.J)){
+        //     Debug.Log("SHAKE");
+        //     cameraShake.Instance.ShakeCamera(5f, 1f);
+        // }
+
         vertical = Input.GetAxisRaw("Vertical");
         if(vertical == 1 && isGrounded() && !isJump){
             isJump = true;

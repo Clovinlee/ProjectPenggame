@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Axe
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -12,7 +14,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Player
   - 
   - 
   - 
@@ -64,4 +66,7 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 1630486427
+    locked: 0
+  - name: Boss
+    uniqueID: 488306901
     locked: 0

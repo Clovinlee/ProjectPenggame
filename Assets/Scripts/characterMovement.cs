@@ -42,10 +42,14 @@ public class characterMovement : MonoBehaviour
         // }
 
         vertical = Input.GetAxisRaw("Vertical");
-        if(vertical == 1 && isGrounded() && !isJump){
+        if(vertical == 1 && isGrounded() && !isJump && anim.GetBool("isDied") == false){
             isJump = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpPower;
+        }
+
+        if(anim.GetBool("isDied") == true){
+            rb.velocity = new Vector2(0,0);
         }
 
         if(vertical == 1 && isJump){
@@ -67,10 +71,11 @@ public class characterMovement : MonoBehaviour
         // return -1 0 1 direction
 
         horizontal = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-
-        anim.SetBool("isRunning",horizontal != 0);
-        flip();
+        if(anim.GetBool("isDied") == false){
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            anim.SetBool("isRunning",horizontal != 0);
+            flip();
+        }
 
     }
 

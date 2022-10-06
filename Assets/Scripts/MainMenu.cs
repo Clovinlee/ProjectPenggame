@@ -22,14 +22,14 @@ public class MainMenu : MonoBehaviour
     }
     public void Play()
     {
-         SceneManager.LoadScene(1);
+         SceneManager.LoadScene(3);
     }
     public void Tutorial()
     {
-         SceneManager.LoadScene(2);
+         SceneManager.LoadScene(1);
     }
     public void About()
     {
-         SceneManager.LoadScene(3);
+         SceneManager.LoadScene(2);
     }
 }

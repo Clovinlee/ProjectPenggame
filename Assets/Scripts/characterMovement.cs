@@ -30,6 +30,7 @@ public class characterMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();       
         bc = GetComponent<BoxCollider2D>(); 
+        cameraShake.Instance.ShakeCamera(0.1f, 0.1f);
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class characterMovement : MonoBehaviour
         //     Debug.Log("SHAKE");
         //     cameraShake.Instance.ShakeCamera(5f, 1f);
         // }
+
 
         vertical = Input.GetAxisRaw("Vertical");
         if(vertical == 1 && isGrounded() && !isJump && anim.GetBool("isDied") == false){

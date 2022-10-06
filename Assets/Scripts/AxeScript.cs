@@ -14,8 +14,8 @@ public class AxeScript : MonoBehaviour
         GameObject p = other.gameObject;
         if(p.CompareTag("Player")){
             p.GetComponent<Hero>().hasAxe = true;
-            
-            //KWAN MUNCULNO TEKS AKU DAPAT AXE, I WONDER WHAT THIS USE BLALBA
+            gameObject.SetActive(false);
+            //CALVIN KWAN KERJA INI : KWAN MUNCULNO TEKS AKU DAPAT AXE, I WONDER WHAT THIS USE BLALBA
         }
     }
 

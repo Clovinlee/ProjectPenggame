@@ -22,4 +22,7 @@ public class MoveScene : MonoBehaviour
     public void Prev(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
+    public void Play(){
+        SceneManager.LoadScene(0);
+    }
 }

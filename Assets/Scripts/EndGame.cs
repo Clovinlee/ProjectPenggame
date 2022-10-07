@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class EndGame : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -18,6 +18,7 @@ public class EndGame : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player")){
+            SceneManager.LoadScene(8);
             //CALVIN KWAN KERJA DISINI : WIN GAME, RETURN TO MAIN MENU BUTTON
             Debug.Log("YOU WIN!");
         }

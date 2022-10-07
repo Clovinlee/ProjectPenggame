@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class bossCollision : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -37,7 +37,7 @@ public class bossCollision : MonoBehaviour
 
     IEnumerator gameOver(){
         yield return new WaitForSeconds(3);
-        
+        SceneManager.LoadScene(7);
         //CALVIN KWAN KERJA INI : YOU DIED SCRIPT KWAN KERJA INI
         Debug.Log("YOU DIED");
         //
